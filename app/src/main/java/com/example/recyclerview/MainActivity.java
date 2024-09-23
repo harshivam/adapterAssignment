@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
         btnDelete = findViewById(R.id.btnDelete);
 
-        // Add button logic
+        // Added button logic
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Add Item");
 
-        // inflating a custom view with an editText
+        // inflating a custom view with an editText for the dialog box
         View viewInflated = LayoutInflater.from(this).inflate(R.layout.dialoglayout, null, false);
         EditText input = viewInflated.findViewById(R.id.input);
         builder.setView(viewInflated);
 
-        // Set up the buttons
+        // Set up the add and delete btn
         builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
